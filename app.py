@@ -471,10 +471,9 @@ api.add_resource(CreateUserVendor, '/user/create-vendor/<string:user_email>')
 
 ##################### Render HTML Page For Admin #######
 
-@app.route('/admin/users', methods=['GET'])
+@app.route('/', methods=['GET'])
 def view_users():
-    users = UserModel.query.all()
-    return render_template('users.html', users=users)
+    return render_template('users.html')
 
 # if __name__ == '__main__':
 #     with app.app_context():
